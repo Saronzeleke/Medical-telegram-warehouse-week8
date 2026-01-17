@@ -1,0 +1,28 @@
+# Core dependencies
+python-dotenv==1.0.0
+pandas==2.0.3
+numpy==1.24.3
+
+# Telegram scraping
+telethon==1.34.0
+asyncpg==0.29.0
+
+# Database
+psycopg2-binary==2.9.7
+sqlalchemy==2.0.19
+
+# API
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+
+# Data processing
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Logging
+structlog==23.2.0
