@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: dim_channels
+    description: "Dimension table for Telegram channels with activity statistics"
+    columns:
+      - name: channel_key
+        description: "Surrogate key for channel dimension"
+        tests:
+          - unique
+          - not_null
+      - name: channel_name
+        description: "Name of the Telegram channel"
+        tests:
+          - not_null
+      - name: first_post_date
+        description: "Date of first message from this channel"
+      - name: last_post_date
+        description: "Date of most recent message from this channel"
+      - name: total_posts
+        description: "Total number of messages from this channel"
+        tests:
+          - not_null
+      - name: avg_views
+        description: "Average views per message"
+
+  - name: dim_dates
+    description: "Date dimension table for time-based analysis"
+    columns:
+      - name: date_key
+        description: "Date key in YYYYMMDD format"
+        tests:
+          - unique
+          - not_null
+      - name: full_date
+        description: "Full date"
+        tests:
+          - not_null
+      - name: is_weekend
+        description: "Flag indicating if date is weekend"
+
+  - name: fct_messages
+    description: "Fact table containing individual Telegram messages"
+    columns:
+      - name: message_id
+        description: "Unique identifier for each message"
+        tests:
+          - unique
+          - not_null
+      - name: channel_key
+        description: "Foreign key to dim_channels"
+        tests:
+          - relationships:
+              to: ref('dim_channels')
+              field: channel_key
+      - name: date_key
+        description: "Foreign key to dim_dates"
+        tests:
+          - relationships:
+              to: ref('dim_dates')
+              field: date_key
+      - name: view_count
+        description: "Number of views for the message"
+        tests:
+          - not_null
+      - name: forward_count
+        description: "Number of forwards for the message"
+      - name: has_image
+        description: "Flag indicating if message contains an image"
+
+tests:
+  - name: assert_positive_views
+    description: "Custom test to ensure view counts are non-negative"
+  - name: assert_no_future_messages
+    description: "Custom test to ensure no messages have future dates"
