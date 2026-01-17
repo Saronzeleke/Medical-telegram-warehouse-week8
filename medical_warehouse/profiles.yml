@@ -5,7 +5,7 @@ medical_warehouse:
       type: postgres
       host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
       user: "{{ env_var('POSTGRES_USER', 'medical_user') }}"
-      pass: "{{ env_var('POSTGRES_PASSWORD', 'secure_password') }}"
+      pass: "{{ env_var('POSTGRES_PASSWORD', 'secure_password_123') }}"
       port: "{{ env_var('POSTGRES_PORT', 5432) }}"
       dbname: "{{ env_var('POSTGRES_DB', 'medical_warehouse') }}"
       schema: public
