@@ -3,10 +3,10 @@ medical_warehouse:
   outputs:
     dev:
       type: postgres
-      host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
-      user: "{{ env_var('POSTGRES_USER', 'medical_user') }}"
-      pass: "{{ env_var('POSTGRES_PASSWORD', 'secure_password_123') }}"
-      port: "{{ env_var('POSTGRES_PORT', 5432) }}"
-      dbname: "{{ env_var('POSTGRES_DB', 'medical_warehouse') }}"
+      host: "127.0.0.1"
+      user: "medical_user"
+      password: "secure_password_123"
+      port: 5432
+      dbname: "medical_warehouse"
       schema: public
       threads: 4
