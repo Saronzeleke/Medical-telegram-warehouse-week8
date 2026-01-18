@@ -3,10 +3,10 @@ medical_warehouse:
   outputs:
     dev:
       type: postgres
-      host: "127.0.0.1"
-      user: "medical_user"
-      password: "secure_password_123"
+      host: postgres      
+      user: medical_user
+      password: secure_password_123
       port: 5432
-      dbname: "medical_warehouse"
-      schema: public
+      dbname: medical_warehouse
+      schema: raw
       threads: 4
