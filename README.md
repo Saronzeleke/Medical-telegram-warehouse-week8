@@ -1,6 +1,6 @@
 # Medical Telegram Data Warehouse
 
-# A complete end-to-end data pipeline for scraping, storing, transforming, and analyzing Ethiopian medical Telegram channels.
+# dbt run --select stagingA complete end-to-end data pipeline for scraping, storing, transforming, and analyzing Ethiopian medical Telegram channels.
 
 📋 Table of Contents
 
