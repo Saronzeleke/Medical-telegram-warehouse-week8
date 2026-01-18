@@ -3,7 +3,8 @@ medical_warehouse:
   outputs:
     dev:
       type: postgres
-      host: postgres      
+      # host: postgres 
+      host : localhost     
       user: medical_user
       password: secure_password_123
       port: 5432
