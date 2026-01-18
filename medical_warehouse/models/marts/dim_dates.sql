@@ -22,11 +22,11 @@ enriched_dates AS (
         EXTRACT(YEAR FROM full_date) as year,
         EXTRACT(QUARTER FROM full_date) as quarter,
         EXTRACT(MONTH FROM full_date) as month,
-        TO_CHAR(full_date, 'Month') as month_name,
+        TO_CHAR(full_date, 'FMMonth') as month_name,
         EXTRACT(WEEK FROM full_date) as week_of_year,
         EXTRACT(DAY FROM full_date) as day_of_month,
         EXTRACT(DOW FROM full_date) as day_of_week,
-        TO_CHAR(full_date, 'Day') as day_name,
+        TO_CHAR(full_date, 'FMDAY') as day_name,
         EXTRACT(DOY FROM full_date) as day_of_year,
         CASE 
             WHEN EXTRACT(DOW FROM full_date) IN (0, 6) THEN TRUE
@@ -37,6 +37,7 @@ enriched_dates AS (
             WHEN EXTRACT(MONTH FROM full_date) = 12 AND EXTRACT(DAY FROM full_date) = 25 THEN 'Christmas'
             ELSE 'Regular Day'
         END as holiday_flag
+    FROM date_range
 )
 
 SELECT *
