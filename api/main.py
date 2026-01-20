@@ -6,7 +6,7 @@ import pandas as pd
 from sqlalchemy import text, func, desc, and_, or_
 
 from . import crud, schemas, database
-from .models import Message, Channel, ImageDetection, DailyStats
+from .models import Message, Channel
 
 app = FastAPI(
     title="Medical Telegram Analytics API",
@@ -218,4 +218,4 @@ async def get_engagement_trends(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="localhost", port=8000)
