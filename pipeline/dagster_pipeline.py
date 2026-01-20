@@ -1,8 +1,3 @@
-"""
-Dagster Pipeline for Medical Telegram Data Pipeline
-Orchestrates the complete ETL workflow
-"""
-
 import os
 import logging
 from datetime import datetime, timedelta
