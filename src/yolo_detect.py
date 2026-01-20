@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-YOLO Object Detection for Medical Telegram Images
-Analyzes downloaded images and categorizes them for enrichment
-"""
-
 import os
 import csv
 import logging
