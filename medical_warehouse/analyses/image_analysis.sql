@@ -1,4 +1,3 @@
--- Analysis: Do promotional posts get more views?
 SELECT 
     fid.image_category,
     COUNT(DISTINCT fid.message_id) as image_count,
