@@ -1,0 +1,51 @@
+message_id,channel_name,image_path,detection_count,detected_classes,image_category,confidence_score,has_person,has_product,processed_at
+22129,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22129.jpg,1,bottle,product_display,0.7326324582099915,False,True,2026-01-20T21:03:20.957195
+22130,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22130.jpg,2,"bottle, book",product_display,0.2869125008583069,False,True,2026-01-20T21:03:21.425284
+22131,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22131.jpg,3,"bottle, person",promotional,0.5082254409790039,True,True,2026-01-20T21:03:21.729761
+22132,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22132.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:22.060245
+22133,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22133.jpg,2,"person, refrigerator",lifestyle,0.7616232633590698,True,False,2026-01-20T21:03:22.329462
+22134,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22134.jpg,2,"person, book",lifestyle,0.38788892328739166,True,False,2026-01-20T21:03:22.583542
+22135,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22135.jpg,1,refrigerator,other,0.38142117857933044,False,False,2026-01-20T21:03:22.876853
+22136,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22136.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:23.163745
+22137,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22137.jpg,1,cell phone,other,0.31958022713661194,False,False,2026-01-20T21:03:23.421545
+22138,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22138.jpg,1,clock,other,0.36091986298561096,False,False,2026-01-20T21:03:23.673936
+22139,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22139.jpg,1,bottle,product_display,0.7326324582099915,False,True,2026-01-20T21:03:23.970479
+22140,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22140.jpg,2,"bottle, book",product_display,0.2869125008583069,False,True,2026-01-20T21:03:24.230927
+22141,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22141.jpg,3,"bottle, person",promotional,0.5082254409790039,True,True,2026-01-20T21:03:24.474019
+22142,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22142.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:24.687781
+22143,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22143.jpg,2,"person, refrigerator",lifestyle,0.7616232633590698,True,False,2026-01-20T21:03:24.975732
+22144,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22144.jpg,2,"person, book",lifestyle,0.38788892328739166,True,False,2026-01-20T21:03:25.234647
+22145,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22145.jpg,1,bottle,product_display,0.8006815314292908,False,True,2026-01-20T21:03:25.492317
+22146,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22146.jpg,1,bottle,product_display,0.5791776776313782,False,True,2026-01-20T21:03:25.747602
+22147,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22147.jpg,1,bottle,product_display,0.38477855920791626,False,True,2026-01-20T21:03:26.080457
+22148,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22148.jpg,2,person,lifestyle,0.4608868509531021,True,False,2026-01-20T21:03:26.361714
+22149,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22149.jpg,1,bottle,product_display,0.9318896532058716,False,True,2026-01-20T21:03:26.590440
+22150,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22150.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:26.882554
+22151,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22151.jpg,2,"bottle, dining table",product_display,0.6212539374828339,False,True,2026-01-20T21:03:27.161184
+22152,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22152.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:27.424604
+22153,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22153.jpg,1,clock,other,0.36091986298561096,False,False,2026-01-20T21:03:27.678127
+22154,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22154.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:27.958255
+22155,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22155.jpg,1,refrigerator,other,0.38142117857933044,False,False,2026-01-20T21:03:28.228329
+22156,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22156.jpg,1,refrigerator,other,0.45795008540153503,False,False,2026-01-20T21:03:28.483840
+22157,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22157.jpg,1,refrigerator,other,0.499969482421875,False,False,2026-01-20T21:03:28.743704
+22158,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22158.jpg,1,refrigerator,other,0.3571476936340332,False,False,2026-01-20T21:03:29.050744
+22159,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22159.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:29.521254
+22160,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22160.jpg,1,bottle,product_display,0.5016388893127441,False,True,2026-01-20T21:03:29.755965
+22161,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22161.jpg,1,refrigerator,other,0.28109970688819885,False,False,2026-01-20T21:03:30.096184
+22162,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22162.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:30.309791
+22163,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22163.jpg,1,dining table,other,0.2931026518344879,False,False,2026-01-20T21:03:30.530697
+22164,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22164.jpg,1,bottle,product_display,0.7241195440292358,False,True,2026-01-20T21:03:30.746251
+22165,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22165.jpg,1,bottle,product_display,0.5719423890113831,False,True,2026-01-20T21:03:30.997486
+22166,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22166.jpg,1,bottle,product_display,0.9162954688072205,False,True,2026-01-20T21:03:31.209984
+22167,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22167.jpg,2,"bottle, cell phone",product_display,0.5166041105985641,False,True,2026-01-20T21:03:31.405465
+22168,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22168.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:31.678526
+22169,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22169.jpg,1,book,other,0.2753816545009613,False,False,2026-01-20T21:03:31.985998
+22170,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22170.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:32.207636
+22171,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22171.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:32.513643
+22172,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22172.jpg,1,bottle,product_display,0.2802514433860779,False,True,2026-01-20T21:03:32.787437
+22173,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22173.jpg,1,bottle,product_display,0.501695454120636,False,True,2026-01-20T21:03:33.198367
+22174,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22174.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:33.515489
+22175,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22175.jpg,1,bottle,product_display,0.7726436853408813,False,True,2026-01-20T21:03:33.779006
+22176,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22176.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:34.084388
+22177,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22177.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:34.334251
+22178,lobelia_cosmetics,data\raw\images\lobelia_cosmetics\22178.jpg,0,none,other,0.0,False,False,2026-01-20T21:03:34.613269

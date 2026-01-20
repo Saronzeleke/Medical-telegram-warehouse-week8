@@ -26,7 +26,7 @@ enriched_detections AS (
     SELECT
         {{ dbt_utils.generate_surrogate_key(['rd.message_id', 'rd.processed_at']) }} as detection_id,
         rd.message_id,
-        COALESCE(dc.channel_key, -1) as channel_key,
+        COALESCE(dc.channel_key, '-1') as channel_key,
         COALESCE(dd.date_key, -1) as date_key,
         rd.image_path,
         rd.detection_count,

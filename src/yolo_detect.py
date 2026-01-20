@@ -230,64 +230,64 @@ class YOLODetector:
         df.to_csv(latest_path, index=False)
         
         return csv_path
-def load_to_postgres(self, results: List[Dict]):
-    """Load detection results to PostgreSQL"""
-    if not results:
-        return
 
-    import os
-    import pandas as pd
-    from sqlalchemy import create_engine, text
+    def load_to_postgres(self, results: List[Dict]):
+        """Load detection results to PostgreSQL"""
+        if not results:
+            return
 
-    db_user = os.getenv('POSTGRES_USER', 'medical_user')
-    db_password = os.getenv('POSTGRES_PASSWORD', 'secure_password')
-    db_host = os.getenv('POSTGRES_HOST', 'localhost')
-    db_port = os.getenv('POSTGRES_PORT', '5432')
-    db_name = os.getenv('POSTGRES_DB', 'medical_warehouse')
+        import os
+        import pandas as pd
+        from sqlalchemy import create_engine, text
 
-    engine = create_engine(
-        f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
-    )
+        db_user = os.getenv('POSTGRES_USER', 'medical_user')
+        db_password = os.getenv('POSTGRES_PASSWORD', 'secure_password')
+        db_host = os.getenv('POSTGRES_HOST', 'localhost')
+        db_port = os.getenv('POSTGRES_PORT', '5432')
+        db_name = os.getenv('POSTGRES_DB', 'medical_warehouse')
 
-    with engine.connect() as conn:
-        # Create schema if it does not exist
-        conn.execute(text("CREATE SCHEMA IF NOT EXISTS raw"))
-        # Create table
-        conn.execute(text("""
-            CREATE TABLE IF NOT EXISTS raw.yolo_detections (
-                id SERIAL PRIMARY KEY,
-                message_id BIGINT,
-                channel_name VARCHAR(255),
-                image_path VARCHAR(500),
-                detection_count INTEGER,
-                detected_classes TEXT,
-                image_category VARCHAR(50),
-                confidence_score DECIMAL(5,4),
-                has_person BOOLEAN,
-                has_product BOOLEAN,
-                processed_at TIMESTAMP,
-                loaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            )
-        """))
-        conn.commit()
+        engine = create_engine(
+            f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
+        )
 
-    # Convert results to DataFrame
-    flat_results = []
-    for result in results:
-        flat_result = {k: v for k, v in result.items() if k != 'detections'}
-        flat_results.append(flat_result)
-    df = pd.DataFrame(flat_results)
+        with engine.connect() as conn:
+            # Create schema if it does not exist
+            conn.execute(text("CREATE SCHEMA IF NOT EXISTS raw"))
+            # Create table
+            conn.execute(text("""
+                CREATE TABLE IF NOT EXISTS raw.yolo_detections (
+                    id SERIAL PRIMARY KEY,
+                    message_id BIGINT,
+                    channel_name VARCHAR(255),
+                    image_path VARCHAR(500),
+                    detection_count INTEGER,
+                    detected_classes TEXT,
+                    image_category VARCHAR(50),
+                    confidence_score DECIMAL(5,4),
+                    has_person BOOLEAN,
+                    has_product BOOLEAN,
+                    processed_at TIMESTAMP,
+                    loaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            """))
+            conn.commit()
 
-    # Load into Postgres
-    df.to_sql(
-        name='yolo_detections',
-        schema='raw',
-        con=engine,
-        if_exists='append',
-        index=False
-    )
-    print(f"Loaded {len(df)} rows into raw.yolo_detections")
+        # Convert results to DataFrame
+        flat_results = []
+        for result in results:
+            flat_result = {k: v for k, v in result.items() if k != 'detections'}
+            flat_results.append(flat_result)
+        df = pd.DataFrame(flat_results)
 
+        # Load into Postgres
+        df.to_sql(
+            name='yolo_detections',
+            schema='raw',
+            con=engine,
+            if_exists='append',
+            index=False
+        )
+        print(f"Loaded {len(df)} rows into raw.yolo_detections")
 
     # def load_to_postgres(self, results: List[Dict]):
     #     """Load detection results to PostgreSQL"""
