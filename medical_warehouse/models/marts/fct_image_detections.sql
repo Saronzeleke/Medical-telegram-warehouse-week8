@@ -54,7 +54,7 @@ enriched_detections AS (
     LEFT JOIN {{ ref('fct_messages') }} fm ON rd.message_id = fm.message_id
     LEFT JOIN {{ ref('dim_channels') }} dc ON fm.channel_key = dc.channel_key
     LEFT JOIN {{ ref('dim_dates') }} dd ON fm.date_key = dd.date_key
-    WHERE rd.detection_count > 0  -- Only include images with actual detections
+    WHERE rd.detection_count > 0  
 )
 
 SELECT *
