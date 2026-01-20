@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-  # Existing services from main docker-compose.yml
   postgres:
     image: postgres:14
     environment:
