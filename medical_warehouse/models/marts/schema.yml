@@ -73,3 +73,30 @@ tests:
     description: "Custom test to ensure view counts are non-negative"
   - name: assert_no_future_messages
     description: "Custom test to ensure no messages have future dates"
+  - name: fct_image_detections
+    description: "Fact table containing YOLO object detection results for images"
+    columns:
+      - name: detection_id
+        description: "Surrogate key for detection record"
+        tests:
+          - unique
+          - not_null
+      - name: message_id
+        description: "Foreign key to fct_messages"
+      - name: channel_key
+        description: "Foreign key to dim_channels"
+        tests:
+          - relationships:
+              to: ref('dim_channels')
+              field: channel_key
+      - name: image_category
+        description: "Category based on detected objects (promotional/product_display/lifestyle/other)"
+        tests:
+          - accepted_values:
+              values: ['promotional', 'product_display', 'lifestyle', 'other']
+      - name: confidence_score
+        description: "Average confidence score of detections (0-1)"
+        tests:
+          - not_null
+      - name: content_strategy
+        description: "Business interpretation of image category"
